@@ -1,7 +1,11 @@
+import 'package:btpapp/routes/route_pages.dart';
+import 'package:btpapp/view/menupages/homescreen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -9,6 +13,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return ScreenUtilInit(
+        designSize: const Size(360, 690),
+        builder: (context, child) {
+          return GetMaterialApp(
+            debugShowCheckedModeBanner: false,
+            home: const HomeScreen(),
+            getPages: AppRoutes.pages,
+          );
+        });
   }
 }
