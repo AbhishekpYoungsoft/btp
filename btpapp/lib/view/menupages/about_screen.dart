@@ -10,6 +10,10 @@ class Aboutuspage extends StatefulWidget {
 class _AboutuspageState extends State<Aboutuspage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        leading: BackButton(),
+      ),
+    );
   }
 }

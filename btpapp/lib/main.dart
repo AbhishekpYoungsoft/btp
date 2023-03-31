@@ -1,4 +1,5 @@
 import 'package:btpapp/routes/route_pages.dart';
+import 'package:btpapp/splash_screen.dart';
 import 'package:btpapp/view/menupages/homescreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         builder: (context, child) {
           return GetMaterialApp(
             debugShowCheckedModeBanner: false,
-            home: const HomeScreen(),
+            home: const SplashScreen(),
             getPages: AppRoutes.pages,
           );
         });
